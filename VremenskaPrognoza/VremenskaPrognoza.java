@@ -1,7 +1,7 @@
 /*
 Zadatak je napraviti konzolni program za ažurni ispis vremenske prognoza koristeći JSON API koji obezbeđuje “openweather” servis.
 Program omogućava ispis trenutne temperature kao i ispis 5dnevne prognoze. Grad se takođe može promeniti a prodrazumevani grad je
-Beograd čiji su podaci: city: Belgrade, countryCode: RS. Za pokretanje koda neophodna je internet konekcija.
+Beograd čiji su podaci: city: Belgrade, countryCode: RS. Za pokretanje koda neophodna je Internet konekcija.
 Unapred je obezbeđena je metoda getWeatherInfo.
 */
 
