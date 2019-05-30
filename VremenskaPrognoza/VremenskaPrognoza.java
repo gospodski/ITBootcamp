@@ -1,3 +1,10 @@
+/*
+Zadatak je napraviti konzolni program za ažurni ispis vremenske prognoza koristeći JSON API koji obezbeđuje “openweather” servis.
+Program omogućava ispis trenutne temperature kao i ispis 5dnevne prognoze. Grad se takođe može promeniti a prodrazumevani grad je
+Beograd čiji su podaci: city: Belgrade, countryCode: RS. Za pokretanje koda neophodna je internet konekcija.
+Unapred je obezbeđena je metoda getWeatherInfo.
+*/
+
 package peta_nedelja_domaci_prvi;
 
 import java.io.BufferedReader;
@@ -49,9 +56,9 @@ public class Program {
 			JSONParser parser = new JSONParser();
 			obj = (JSONObject) parser.parse(getWeatherInfo(grad, kod, Type.CURRENT));
 			obj = (JSONObject) obj.get("main");
-			System.out.println("Trenutna: " + obj.get("temp") + "�C");
-			System.out.println("Maksimalna: " + obj.get("temp_max") + "�C");
-			System.out.println("Minimalna: " + obj.get("temp_min") + "�C");
+			System.out.println("Trenutna: " + obj.get("temp") + "°C");
+			System.out.println("Maksimalna: " + obj.get("temp_max") + "°C");
+			System.out.println("Minimalna: " + obj.get("temp_min") + "°C");
 			System.out.println("------------------------");
 
 		} catch (IOException e) {
@@ -83,7 +90,7 @@ public class Program {
 
 				if (index == 7)
 					index = 0;
-				System.out.print(dani[index] + ": " + obj.get("temp") + "�C\n");
+				System.out.print(dani[index] + ": " + obj.get("temp") + "°C\n");
 				index++;
 
 				if (y == 32)
